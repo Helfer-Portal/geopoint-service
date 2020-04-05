@@ -19,9 +19,10 @@ export interface Address {
     country: string;
 }
 
-export const handler = async (event: EventPayload): Promise<Position> => {
+export const handler = async (event: any): Promise<any> => {
     dotenv.config();
 
+    console.log('Event: ' + JSON.stringify(event))
     const apiKey = process.env.HERE_API_KEY;
     if (!apiKey) {
         throw Error('API KEY NOT DEFINED!');
@@ -45,7 +46,14 @@ export const handler = async (event: EventPayload): Promise<Position> => {
         console.log(JSON.stringify(result!.data));
     }
 
-    return result.data.items[0].position;
+    return {
+        isBase64Encoded: false,
+        statusCode: 200,
+        body: JSON.stringify(result.data.items[0].position),
+        headers: {
+            'Content-Type': "application/json"
+        }
+    }
 };
 
 function buildQueryString({ street, hn, city, country, zip }: Address): string {

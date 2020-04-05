@@ -4,9 +4,9 @@ import {Address, EventPayload, handler} from './index';
   const address: Address = {
     city: "München",
     country: "Germany",
-    zip: "",
-    street: "",
-    hn: ""
+    zip: "81539 ",
+    street: "Deisenhofenerstrasse",
+    hn: "34"
   };
   const requestObject: EventPayload = {
     body: JSON.stringify(address)
