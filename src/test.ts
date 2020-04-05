@@ -1,4 +1,5 @@
-import {Address, EventPayload, handler} from './index';
+import {Address, LambdaInputEvent, handler} from './index';
+import {logger} from "./logger";
 
 (async function() {
   const address: Address = {
@@ -8,9 +9,9 @@ import {Address, EventPayload, handler} from './index';
     street: "Deisenhofenerstrasse",
     hn: "34"
   };
-  const requestObject: EventPayload = {
+  const requestObject: LambdaInputEvent = {
     body: JSON.stringify(address)
   };
   const result = await handler(requestObject);
-  console.log(result);
+  logger.info(JSON.stringify(result))
 })();

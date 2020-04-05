@@ -6,9 +6,12 @@
 Convert addresses to geopoints
 
 
-## deploy
+## deploy 
 Service is deployed as a AWS lambda behind a API gateway
 
+Builds from master are automatically deployed via github
+
+If you want to do it manually:
 * install `aws cli`
 * run `aws configure` to setup aws credentials
 * run `deploy-lambda.sh`
