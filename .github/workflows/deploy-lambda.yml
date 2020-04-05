@@ -1,8 +1,7 @@
 on:
   push:
     branches:
-    - ci-cd
-      - 
+    - master
 jobs:
   deploy_source:
     name: build and deploy lambda
@@ -34,4 +33,3 @@ jobs:
           aws_region: eu-central-1
           function_name: HelpOnSpot-convertLocation
           zip_file: bundle.zip
-          dry_run: true
