@@ -1,2 +1,4 @@
 app.zip
 .idea
+dist
+node_modules

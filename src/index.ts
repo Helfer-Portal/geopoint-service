@@ -1,5 +1,5 @@
 
-exports.handler = async (event) => {
+export const handler = async (event: any) => {
     // TODO implement
 
     console.log(JSON.stringify(event))

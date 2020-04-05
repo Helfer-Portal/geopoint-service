@@ -1,0 +1,23 @@
+{
+  "name": "geopoint-service",
+  "version": "1.0.0",
+  "description": "Convert addresses to geopoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo ba"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helfer-Portal/geopoint-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helfer-Portal/geopoint-service/issues"
+  },
+  "homepage": "https://github.com/Helfer-Portal/geopoint-service#readme",
+  "dependencies": {
+    "typescript": "^3.8.3"
+  }
+}
