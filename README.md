@@ -15,3 +15,22 @@ If you want to do it manually:
 * install `aws cli`
 * run `aws configure` to setup aws credentials
 * run `deploy-lambda.sh`
+
+
+## how to use
+* POST and `Address` to `/geopoint` to receive a `Position
+* sample curl:
+
+```
+curl -X POST \
+   https://m8v8hor698.execute-api.eu-central-1.amazonaws.com/geopoint \
+   -H 'Accept: */*' \
+   -H 'Content-Type: application/json' \
+   -H 'Host: m8v8hor698.execute-api.eu-central-1.amazonaws.com' \
+   -d '{
+ 	"city": "München",
+     "country": "Germany",
+     "zip": "81541",
+     "street": "Zugspitzstrasse",
+     "hn": "19"
+ }'
