@@ -3,11 +3,11 @@ import {logger} from "./logger";
 
 (async function() {
   const address: Address = {
-    city: "München",
-    country: "Germany",
-    zip: "81539 ",
-    street: "Deisenhofenerstrasse",
-    hn: "34"
+      "city": "München",
+      "country": "Germany",
+      "zip": "81541",
+      "street": "Zugspitzstrasse",
+      "hn": "19"
   };
   const requestObject: LambdaInputEvent = {
     body: JSON.stringify(address)
