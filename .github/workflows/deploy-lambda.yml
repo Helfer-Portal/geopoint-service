@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+    - ci-cd
+      - 
+jobs:
+  deploy:
+    name: deploy lambda to AWS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
