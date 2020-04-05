@@ -7,21 +7,21 @@ import {defaultHeader, HERE_API_URL} from "./constants";
 interface LambdaResponse {
     isBase64Encoded: Boolean
     statusCode: number
-    body: string,
+    body: string
     headers: any
 }
 
 
 export interface LambdaInputEvent {
-    body: string;
+    body: string
 }
 
 export interface Address {
-    street: string;
-    hn: string;
-    zip: string;
-    city: string;
-    country: string;
+    street: string
+    hn: string
+    zip: string
+    city: string
+    country: string
 }
 
 
