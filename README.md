@@ -3,7 +3,7 @@
 # geopoint-service
 
 
-Convert addresses to geopoints
+Convert Address(s) to GeoPoint(s)
 
 
 ## deploy 
@@ -23,14 +23,20 @@ If you want to do it manually:
 
 ```
 curl -X POST \
-   https://m8v8hor698.execute-api.eu-central-1.amazonaws.com/geopoint \
-   -H 'Accept: */*' \
-   -H 'Content-Type: application/json' \
-   -H 'Host: m8v8hor698.execute-api.eu-central-1.amazonaws.`com' \
-   -d '{
- 	"city": "München",`
-     "country": "Germany",`
-     "zip": "81541",
-     "street": "Zugspitzstrasse",
-     "hn": "19"
- }'
+  https://o30e6wbg7l.execute-api.eu-west-1.amazonaws.com/dev/geopoint \
+  -H 'Accept: */*' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: o30e6wbg7l.execute-api.eu-west-1.amazonaws.com' \
+  -d '{
+	"city": "München",
+    "country": "Germany",
+    "zip": "81541",
+    "street": "Zugspitzstrasse",
+    "hn": "19"
+}'
+
+```
+
+## API documentation
+* see `swagger.yml` file
+* import to [swagger-editor](https://editor.swagger.io/) to generate swagger-ui

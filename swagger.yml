@@ -1,0 +1,57 @@
+---
+swagger: "2.0"
+info:
+  version: "2020-04-06T19:32:16Z"
+  title: "HelpOnSpot"
+host: "o30e6wbg7l.execute-api.eu-west-1.amazonaws.com"
+basePath: "/dev"
+schemes:
+  - "https"
+paths:
+  /geopoint:
+    post:
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "Address"
+          required: true
+          schema:
+            $ref: "#/definitions/Address"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/GeoPoint"
+definitions:
+  GeoPoint:
+    type: "object"
+    required:
+      - "lat"
+      - "lng"
+    properties:
+      lat:
+        type: "number"
+      lng:
+        type: "number"
+  Address:
+    type: "object"
+    required:
+      - "city"
+      - "country"
+      - "hn"
+      - "street"
+      - "zip"
+    properties:
+      city:
+        type: "string"
+      country:
+        type: "string"
+      zip:
+        type: "string"
+      street:
+        type: "string"
+      hn:
+        type: "string"
