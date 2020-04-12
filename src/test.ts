@@ -4,9 +4,9 @@ import { logger } from './logger'
     const address: Address = {
         city: 'München',
         country: 'Germany',
-        zip: '81541',
+        postalCode: '81541',
         street: 'Zugspitzstrasse',
-        hn: '19'
+        houseNumber: '19'
     }
     const requestObject: LambdaInputEvent = {
         body: JSON.stringify(address)

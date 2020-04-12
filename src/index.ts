@@ -18,8 +18,8 @@ export interface LambdaInputEvent {
 
 export interface Address {
     street: string
-    hn: string
-    zip: string
+    houseNumber: string
+    postalCode: string
     city: string
     country: string
 }
@@ -45,7 +45,7 @@ export const handler = async (event: LambdaInputEvent): Promise<LambdaResponse> 
             headers: defaultHeader
         }
     } catch (e) {
-        logger.error(`Error during lambda execution: ${JSON.stringify(e)}`)
+        logger.error(`Error during lambda execution: ${e}, ${JSON.stringify(e)}`)
         return {
             isBase64Encoded: false,
             statusCode: 500,
@@ -67,6 +67,6 @@ async function queryHereApi(queryString: string): Promise<{ data: any }> {
     return result
 }
 
-function buildQueryString({ street, hn, city, country, zip }: Address): string {
-    return querystring.stringify({ city, street, country, houseNumber: hn, postalCode: zip }, ';', '=')
+function buildQueryString({ street, houseNumber, city, country, postalCode }: Address): string {
+    return querystring.stringify({ city, street, country, houseNumber, postalCode }, ';', '=')
 }
